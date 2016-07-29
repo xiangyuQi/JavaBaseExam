@@ -39,7 +39,7 @@ public class Exam4 {
 			int cur  = lists.get(i);
 			maps.get(cur/10).add(cur);
 		}
-		System.out.print("Map 中的数据为:{");
+		System.out.print("Map中的数据为:{");
 		Set<Integer> keys = maps.keySet();
 		for(Iterator<Integer> it = keys.iterator();it.hasNext();){
 			Integer c = it.next();
@@ -54,7 +54,7 @@ public class Exam4 {
 				System.out.print("],");
 			else System.out.println("]}");
 		}
-		System.out.print("排序后的 Map 为");
+		System.out.print("排序后的 Map为:{");
 		for(Iterator<Integer> it = keys.iterator();it.hasNext();){
 			Integer c = it.next();
 			
