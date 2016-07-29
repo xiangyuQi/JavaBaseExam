@@ -54,8 +54,41 @@ public class Exam4 {
 				System.out.print("],");
 			else System.out.println("]}");
 		}
-		System.out.println("");
-		
-		
+		System.out.print("排序后的 Map 为");
+		for(Iterator<Integer> it = keys.iterator();it.hasNext();){
+			Integer c = it.next();
+			
+			List<Integer> values = maps.get(c);
+			bubble_sort(values);
+		}
+		for(Iterator<Integer> it = keys.iterator();it.hasNext();){
+			Integer c = it.next();
+			System.out.print(c+"=>[");
+			List<Integer> values = maps.get(c);
+			for(int i = 0;i<values.size();i++){
+				if(i<values.size()-1)
+					System.out.print(values.get(i)+",");
+				else System.out.print(values.get(i));
+			}
+			if(it.hasNext())
+				System.out.print("],");
+			else System.out.println("]}");
+		}
 	}
+	static void bubble_sort(List<Integer> lists)
+	{
+	    int i, j, temp;
+	    int n = lists.size();
+	    for (j = 0; j < n - 1; j++)
+	        for (i = 0; i < n - 1 - j; i++)
+	        {
+	            if(lists.get(i) > lists.get(i+1) )
+	            {
+	                temp = lists.get(i) ;
+	                lists.set(i, lists.get(i+1)); 
+	                lists.set(i+1, temp);
+	            }
+	        }
+	} 
+
 }
